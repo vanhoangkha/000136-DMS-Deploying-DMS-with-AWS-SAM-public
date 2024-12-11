@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Triển Khai Cognito Và S3 Bucket :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1701093658" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701093658" rel="stylesheet">
-    <link href="/css/hybrid.css?1701093658" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701093658" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701093658" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701093658" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701093658" rel="stylesheet">
-    <link href="/css/theme.css?1701093658" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701093658" rel="stylesheet">
+    <link href="/css/nucleus.css?1733902130" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733902130" rel="stylesheet">
+    <link href="/css/hybrid.css?1733902130" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733902130" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733902130" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733902130" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733902130" rel="stylesheet">
+    <link href="/css/theme.css?1733902130" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733902130" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701093658" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733902130" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701093658"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733902130"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701093658"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701093658"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733902130"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733902130"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701093658"></script>
+<script type="text/javascript" src="/js/search.js?1733902130"></script>
 
     
   </div>
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/vi/1-authenication-and-storage/1-1-deploy-cognito-and-s3/" title="Triển Khai Cognito Và S3 Bucket" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -337,7 +337,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>11-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -459,14 +459,14 @@ sam init
 </span></span><span style="display:flex;"><span>  Use the most popular runtime and package type? <span style="color:#f92672">(</span>Python and zip<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
 </span></span><span style="display:flex;"><span>  Would you like to enable X-Ray tracing on the <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in your application?  <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: n
 </span></span><span style="display:flex;"><span>  Project name <span style="color:#f92672">[</span>sam-app<span style="color:#f92672">]</span> : fcjdmssam
-</span></span></code></pre></div><p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-1.png?featherlight=false&amp;width=90pc" alt="SAMInit"></p>
+</span></span></code></pre></div><p><img alt="SAMInit" src="/images/1-authenication-and-storage/1-authenication-and-storage-1.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Mở SAM project bằng trình chỉnh sửa. Mở tệp <strong>template.yaml</strong></li>
 </ol>
 <ul>
 <li>Xoá phần không cần thiết</li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-2.png?featherlight=false&amp;width=90pc" alt="SAMInit"></p>
+<p><img alt="SAMInit" src="/images/1-authenication-and-storage/1-authenication-and-storage-2.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Sao chép đoạn code sau vào phần <strong>Resources</strong>:</li>
 </ol>
@@ -523,17 +523,17 @@ sam init
 <li>Một User Pool Client: Cho phép người dùng kết hợp đăng nhập với mật khẩu và tích hợp với User Pool</li>
 <li>Một Identity Pool: Hỗ trợ thông tin chưa được xác thực và thiết lập user pool và client ID.</li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-3.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
+<p><img alt="CreateBucket" src="/images/1-authenication-and-storage/1-authenication-and-storage-3.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Chạy câu lệnh sau để build project:</li>
 </ol>
 <pre tabindex="0"><code>sam build
-</code></pre><p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-4.png?featherlight=false&amp;width=90pc" alt="CreateUserPool"></p>
+</code></pre><p><img alt="CreateUserPool" src="/images/1-authenication-and-storage/1-authenication-and-storage-4.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chạy dòng lệnh sau để kiểm tra SAM template có hợp lệ không:</li>
 </ul>
 <pre tabindex="0"><code>sam validate
-</code></pre><p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-5.png?featherlight=false&amp;width=90pc" alt="CreateUserPool"></p>
+</code></pre><p><img alt="CreateUserPool" src="/images/1-authenication-and-storage/1-authenication-and-storage-5.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chạy dòng lệnh dưới để triển khai SAM:</li>
 </ul>
@@ -543,16 +543,16 @@ sam init
 <li>Nhập vùng mà bạn muốn triển khai, ví dụ: <code>ap-southeast-1</code></li>
 <li>Sau đó nhập các thông tin khác như hình dưới đây:</li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-6.png?featherlight=false&amp;width=90pc" alt="CreateUserPool"></p>
+<p><img alt="CreateUserPool" src="/images/1-authenication-and-storage/1-authenication-and-storage-6.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Đợi một lúc để tạo CloudFormation stack changeset</li>
 <li>Nhập <code>y</code> khi được hỏi <strong>Deploy this changeset?</strong></li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-7.png?featherlight=false&amp;width=90pc" alt="CreateUserPool"></p>
+<p><img alt="CreateUserPool" src="/images/1-authenication-and-storage/1-authenication-and-storage-7.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Kết quả sau khi CloudFormation hoàn thành:</li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-8.png?featherlight=false&amp;width=90pc" alt="CreateUserPool"></p>
+<p><img alt="CreateUserPool" src="/images/1-authenication-and-storage/1-authenication-and-storage-8.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Mở bảng điều khiển của <a href="https://ap-southeast-1.console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/">CloudFormation</a>.</li>
 </ol>
@@ -561,7 +561,7 @@ sam init
 <li>Chọn tab <strong>Resources</strong>. Bạn sẽ thấy các tài nguyên mà mình đã mô tả trong template.</li>
 <li>Ấn vào <strong>FcjDmsUserPool</strong> để mở bảng điều khiển của user pool đó.</li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-9.png?featherlight=false&amp;width=90pc" alt="CheckUserPool"></p>
+<p><img alt="CheckUserPool" src="/images/1-authenication-and-storage/1-authenication-and-storage-9.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Tiếp theo chúng ta sẽ tạo một S3 bucket lưu các tệp mà người dùng tải lên.</li>
 </ol>
@@ -576,7 +576,7 @@ sam init
 <div class="notices note" ><p>Thay đổi giá trị <strong>Default</strong> để thay đổi tên cho bucket</p>
 </div>
 
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-10.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
+<p><img alt="CreateBucket" src="/images/1-authenication-and-storage/1-authenication-and-storage-10.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Thêm đoạn code sau vào tệp:</li>
 </ul>
@@ -603,7 +603,7 @@ sam init
 </span></span><span style="display:flex;"><span>              - <span style="color:#ae81ff">ETag</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">MaxAge</span>: <span style="color:#ae81ff">1800</span>
 </span></span></code></pre></div><p>Với đoạn code trên, S3 bucket được thiết lập CorsRules cho phép ứng dụng web của chúng ta tương tác với nó.</p>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-11.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
+<p><img alt="CreateBucket" src="/images/1-authenication-and-storage/1-authenication-and-storage-11.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Tiếp theo chúng ta sẽ tạo role cho các truy cập chưa xác thực và xác thực vào S3. Thêm đoạn code sau vào cuối tệp:</li>
 </ol>
@@ -696,13 +696,13 @@ sam init
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">Roles</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">authenticated</span>: !<span style="color:#ae81ff">GetAtt CognitoAuthorizedRole.Arn</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">unauthenticated</span>: !<span style="color:#ae81ff">GetAtt CognitoUnAuthorizedRole.Arn</span>
-</span></span></code></pre></div><p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-12.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
+</span></span></code></pre></div><p><img alt="CreateBucket" src="/images/1-authenication-and-storage/1-authenication-and-storage-12.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Chạy các câu lệnh sau:</li>
 </ol>
 <pre tabindex="0"><code>sam build
 sam deploy
-</code></pre><p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-13.png?featherlight=false&amp;width=90pc" alt="CreateBucket"></p>
+</code></pre><p><img alt="CreateBucket" src="/images/1-authenication-and-storage/1-authenication-and-storage-13.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Tiếp theo chúng ta sẽ sử dụng amplify để import authentication và storage vào ứng dụng web của mình. Chạy câu lệnh sau tại thư mục gốc của front-end project.</li>
 </ol>
@@ -731,7 +731,7 @@ Using default provider  awscloudformation<br>
 ? Help improve Amplify CLI by sharing non sensitive configurations on failures (y/N) › <code>No</code></p>
 </li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-14.png?featherlight=false&amp;width=90pc" alt="AddAmplify"></p>
+<p><img alt="AddAmplify" src="/images/1-authenication-and-storage/1-authenication-and-storage-14.png?featherlight=false&width=90pc"></p>
 
 <div class="notices note" ><p>Nếu chưa tải project thì chạy các câu lệnh sau:<br>
 <code>git clone https://github.com/AWS-First-Cloud-Journey/FCJ-Serverless-DMS</code><br>
@@ -746,7 +746,7 @@ Using default provider  awscloudformation<br>
 </code></pre><ul>
 <li>Chọn <strong>Cognito User Pool and Identity Pool</strong> cho <em>What type of auth resource do you want to import?</em></li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-15.png?featherlight=false&amp;width=90pc" alt="AddAmplify"></p>
+<p><img alt="AddAmplify" src="/images/1-authenication-and-storage/1-authenication-and-storage-15.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Chạy câu lệnh sau để import storage vào project:</li>
 </ol>
@@ -755,11 +755,11 @@ Using default provider  awscloudformation<br>
 <li>Chọn <strong>S3 bucket - Content (Images, audio, video, etc.)</strong> cho <em>Select from one of the below mentioned services</em></li>
 <li>Chọn bucket mà bạn đã tạo từ các bước trên</li>
 </ul>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-16.png?featherlight=false&amp;width=90pc" alt="AddAmplify"></p>
+<p><img alt="AddAmplify" src="/images/1-authenication-and-storage/1-authenication-and-storage-16.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Chạy câu lệnh: <code>amplify push</code> để cập nhật tài nguyên cloud.</li>
 </ol>
-<p><img src="/images/1-authenication-and-storage/1-authenication-and-storage-17.png?featherlight=false&amp;width=90pc" alt="AddAmplify"></p>
+<p><img alt="AddAmplify" src="/images/1-authenication-and-storage/1-authenication-and-storage-17.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -920,19 +920,19 @@ Using default provider  awscloudformation<br>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701093658"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701093658"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701093658"></script>
-    <script src="/js/jquery.sticky.js?1701093658"></script>
-    <script src="/js/featherlight.min.js?1701093658"></script>
-    <script src="/js/highlight.pack.js?1701093658"></script>
+    <script src="/js/clipboard.min.js?1733902130"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733902130"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733902130"></script>
+    <script src="/js/jquery.sticky.js?1733902130"></script>
+    <script src="/js/featherlight.min.js?1733902130"></script>
+    <script src="/js/highlight.pack.js?1733902130"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701093658"></script>
-    <script src="/js/learn.js?1701093658"></script>
-    <script src="/js/hugo-learn.js?1701093658"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733902130"></script>
+    <script src="/js/learn.js?1733902130"></script>
+    <script src="/js/hugo-learn.js?1733902130"></script>
 
-    <link href="/mermaid/mermaid.css?1701093658" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701093658"></script>
+    <link href="/mermaid/mermaid.css?1733902130" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733902130"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

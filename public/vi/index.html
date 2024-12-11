@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Serverless - Triển khai ứng dụng với SAM :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1701093658" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701093658" rel="stylesheet">
-    <link href="/css/hybrid.css?1701093658" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701093658" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701093658" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701093658" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701093658" rel="stylesheet">
-    <link href="/css/theme.css?1701093658" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701093658" rel="stylesheet">
+    <link href="/css/nucleus.css?1733902130" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733902130" rel="stylesheet">
+    <link href="/css/hybrid.css?1733902130" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733902130" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733902130" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733902130" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733902130" rel="stylesheet">
+    <link href="/css/theme.css?1733902130" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733902130" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701093658" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733902130" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701093658"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733902130"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701093658"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701093658"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733902130"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733902130"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701093658"></script>
+<script type="text/javascript" src="/js/search.js?1733902130"></script>
 
     
   </div>
@@ -337,7 +337,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>11-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -382,13 +382,13 @@
 <p>Trong các bài trước của series này, chúng ta đã tìm hiểu cách xây dựng một ứng dụng web đơn giản theo mô hình serverless trên cách sử dụng bảng điều khiển của AWS. Để xây dựng ứng dụng serverless nhanh hơn, AWS cung cấp cho người dùng dịch vụ AWS Serverless Application Model (SAM) - là một open-source framework để xây dựng một ứng dụng serverless. SAM cung cấp cú pháp để diễn đạt các hàm, API, cơ sở dữ liệu và event source mappings. Chỉ với vài dòng cho mỗi tài nguyên, bạn có thể xác định ứng dụng bạn muốn và lập mô hình ứng dụng đó bằng YAML. Trong quá trình triển khai, SAM chuyển đổi và mở rộng cú pháp SAM thành cú pháp của AWS CloudFormation. Sau đó, CloudFormation cung cấp các tài nguyên cho người dùng.</p>
 <p>Trong bài này, chúng ta sẽ cùng nhau xây dựng lại ứng dụng web ở bài trước với AWS SAM.</p>
 <p>Kiến trúc của ứng dụng chúng ta sẽ xây dựng:</p>
-<p><img src="/images/serverless-architect-diagram.png?featherlight=false&amp;width=50pc" alt="WebArchitect"></p>
+<p><img alt="WebArchitect" src="/images/serverless-architect-diagram.png?featherlight=false&width=50pc"></p>
 <h3 id="nội-dung">Nội dung</h3>
 <ol>
-<li><a href="1-authenication-and-storage/">Xác thực và lưu trữ</a></li>
-<li><a href="2-config-api-and-lambda-function/">Thiết lập APIs và Lambda function</a></li>
-<li><a href="3-test-api-with-front-end/">Kiểm tra API với Front-end</a></li>
-<li><a href="4-cleanup">Dọn dẹp tài nguyên</a></li>
+<li><a href="/vi/1-authenication-and-storage/">Xác thực và lưu trữ</a></li>
+<li><a href="/vi/2-config-api-and-lambda-function/">Thiết lập APIs và Lambda function</a></li>
+<li><a href="/vi/3-test-api-with-front-end/">Kiểm tra API với Front-end</a></li>
+<li><a href="/vi/4-cleanup/">Dọn dẹp tài nguyên</a></li>
 </ol>
 	
   
@@ -539,19 +539,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701093658"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701093658"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701093658"></script>
-    <script src="/js/jquery.sticky.js?1701093658"></script>
-    <script src="/js/featherlight.min.js?1701093658"></script>
-    <script src="/js/highlight.pack.js?1701093658"></script>
+    <script src="/js/clipboard.min.js?1733902130"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733902130"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733902130"></script>
+    <script src="/js/jquery.sticky.js?1733902130"></script>
+    <script src="/js/featherlight.min.js?1733902130"></script>
+    <script src="/js/highlight.pack.js?1733902130"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701093658"></script>
-    <script src="/js/learn.js?1701093658"></script>
-    <script src="/js/hugo-learn.js?1701093658"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733902130"></script>
+    <script src="/js/learn.js?1733902130"></script>
+    <script src="/js/hugo-learn.js?1733902130"></script>
 
-    <link href="/mermaid/mermaid.css?1701093658" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701093658"></script>
+    <link href="/mermaid/mermaid.css?1733902130" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733902130"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
